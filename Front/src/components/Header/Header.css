@@ -1,0 +1,40 @@
+.header {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+.header-conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header-titulo {
+  font-size: 1.4rem;
+}
+
+.header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.header-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header-nav a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}

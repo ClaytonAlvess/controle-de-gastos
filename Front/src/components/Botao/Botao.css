@@ -1,0 +1,29 @@
+.botao {
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #1b5e20;
+}
+
+.botao-perigo {
+  background-color: #c62828;
+}
+
+.botao-perigo:hover {
+  background-color: #8e0000;
+}
+
+.botao-secundario {
+  background-color: #757575;
+}
+
+.botao-secundario:hover {
+  background-color: #494949;
+}
