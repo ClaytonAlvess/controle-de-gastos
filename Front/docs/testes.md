@@ -46,6 +46,9 @@ Testes realizados com o Back rodando em `http://localhost:3000` e o Front em `ht
 | Gastos | Editar | Clicar em Editar, mudar valor e categoria e clicar em Atualizar | Formulário preenchido, depois dados e total atualizados | OK |
 | Gastos | Validação | Clicar em Cadastrar com o formulário vazio | Mensagem "Preencha descrição, valor e categoria" | OK |
 | Gastos | Excluir | Clicar em Excluir e confirmar | Gasto removido e total atualizado | OK |
+| Gastos | Busca e filtro | Filtrar por "Moradia" e buscar "conta" | Apenas "Conta de luz" e "Conta de água", total filtrado R$ 250,94 | OK |
+| Início | Painel | Abrir `/` com dados cadastrados | Cards de resumo, barras por categoria e últimos gastos | OK |
+| Todas | Celular (390px) | Abrir as telas em largura de celular | Layout em uma coluna, tabelas viram cards, sem rolagem horizontal da página | OK |
 
 ## Build
 

@@ -1,7 +1,13 @@
 .footer {
-  background-color: #333;
-  color: #ddd;
+  background-color: #263238;
+  color: #b0bec5;
   text-align: center;
-  padding: 16px;
-  font-size: 0.9rem;
+  padding: 20px 16px;
+  font-size: 0.85rem;
+}
+
+.footer-titulo {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 4px;
 }

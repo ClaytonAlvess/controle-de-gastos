@@ -5,7 +5,8 @@ const anoAtual = new Date().getFullYear();
 function Footer() {
   return (
     <footer className="footer">
-      <p>Controle de Gastos &copy; {anoAtual} - Desenvolvimento Web Mobile II</p>
+      <p className="footer-titulo">Controle de Gastos</p>
+      <p>&copy; {anoAtual} · Desenvolvimento Web Mobile II</p>
     </footer>
   );
 }

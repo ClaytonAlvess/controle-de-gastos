@@ -5,7 +5,10 @@ function Header() {
   return (
     <header className="header">
       <div className="header-conteudo">
-        <h1 className="header-titulo">Controle de Gastos</h1>
+        <NavLink to="/" className="header-marca">
+          <span className="header-logo">R$</span>
+          <h1 className="header-titulo">Controle de Gastos</h1>
+        </NavLink>
         <nav className="header-nav">
           <NavLink to="/" end>Início</NavLink>
           <NavLink to="/gastos">Gastos</NavLink>

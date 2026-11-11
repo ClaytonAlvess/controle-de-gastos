@@ -13,3 +13,10 @@
 <Botao texto="Editar" tipo="secundario" onClick={() => editar(item)} />
 <Botao texto="Excluir" tipo="perigo" onClick={() => excluir(item)} />
 ```
+
+## Utilitários
+
+| Arquivo | Responsabilidade |
+|---------|------------------|
+| `src/services/api.js` | Exportar a URL da API (`http://localhost:3000`) |
+| `src/utils/formatar.js` | Formatar valores em reais e datas no padrão brasileiro e definir a cor de cada categoria |

@@ -1,29 +1,77 @@
-.gastos h2 {
-  margin-bottom: 16px;
+.gastos-cabecalho {
+  margin-bottom: 24px;
+}
+
+.gastos-cabecalho h2 {
+  font-size: 1.7rem;
+}
+
+.gastos-cabecalho p {
+  color: var(--texto-suave);
+}
+
+.gastos-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.gastos-card {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  padding: 18px 20px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gastos-card span {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.gastos-card strong {
+  font-size: 1.45rem;
+}
+
+.gastos-card-destaque {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+  color: #fff;
+}
+
+.gastos-card-destaque span {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .gastos-form {
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: var(--branco);
+  border-radius: var(--raio);
   padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-shadow: var(--sombra);
+  border-top: 4px solid var(--verde);
+}
+
+.gastos-form-editando {
+  border-top-color: #ef6c00;
 }
 
 .gastos-form h3 {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .gastos-campos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+  gap: 14px;
 }
 
 .gastos-campo {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .gastos-campo-largo {
@@ -32,40 +80,88 @@
 
 .gastos-campo label {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
 }
 
 .gastos-campo input,
-.gastos-campo select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.gastos-campo select,
+.gastos-filtros input,
+.gastos-filtros select {
+  padding: 10px 12px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
   font-size: 1rem;
   background-color: #fff;
+  color: var(--texto);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gastos-campo input:focus,
+.gastos-campo select:focus,
+.gastos-filtros input:focus,
+.gastos-filtros select:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
 }
 
 .gastos-acoes {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: 18px;
+  flex-wrap: wrap;
 }
 
 .gastos-mensagem {
-  padding: 10px 14px;
-  border-radius: 4px;
+  padding: 12px 16px;
+  border-radius: 8px;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.gastos-mensagem button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
 }
 
 .gastos-erro {
   background-color: #ffebee;
-  color: #c62828;
+  color: var(--vermelho);
   border: 1px solid #ef9a9a;
 }
 
 .gastos-sucesso {
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  background-color: var(--verde-claro);
+  color: var(--verde);
   border: 1px solid #a5d6a7;
+}
+
+.gastos-lista {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+.gastos-filtros {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--borda);
+  flex-wrap: wrap;
+}
+
+.gastos-filtros input {
+  flex: 1;
+  min-width: 200px;
 }
 
 .gastos-tabela-container {
@@ -75,28 +171,69 @@
 .gastos-tabela {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .gastos-tabela th,
 .gastos-tabela td {
-  padding: 10px 12px;
+  padding: 12px 16px;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--borda);
   white-space: nowrap;
 }
 
 .gastos-tabela th {
-  background-color: #e8f5e9;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--texto-suave);
+  background-color: #fafbfc;
+}
+
+.gastos-tabela tbody tr:hover {
+  background-color: #f7faf7;
+}
+
+.gastos-linha-editando {
+  background-color: #fff3e0 !important;
+}
+
+.gastos-direita {
+  text-align: right !important;
+}
+
+.gastos-data {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+}
+
+.gastos-descricao {
+  font-weight: bold;
+}
+
+.gastos-valor {
+  font-weight: bold;
+  color: var(--vermelho);
+}
+
+.gastos-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .gastos-tabela tfoot td {
   font-weight: bold;
-  background-color: #f1f8e9;
+  font-size: 1.05rem;
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
   border-bottom: none;
+}
+
+.gastos-tabela tfoot small {
+  font-weight: normal;
+  font-size: 0.8rem;
 }
 
 .gastos-botoes {
@@ -106,5 +243,85 @@
 
 .gastos-vazio {
   text-align: center !important;
-  color: #777;
+  color: var(--texto-suave);
+  padding: 32px !important;
+}
+
+/* Celular: cada gasto vira um card */
+@media (max-width: 640px) {
+  .gastos-card {
+    padding: 14px 16px;
+  }
+
+  .gastos-card strong {
+    font-size: 1.15rem;
+  }
+
+  .gastos-tabela thead {
+    display: none;
+  }
+
+  .gastos-tabela,
+  .gastos-tabela tbody,
+  .gastos-tabela tfoot {
+    display: block;
+  }
+
+  .gastos-tabela tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'descricao valor'
+      'categoria data'
+      'botoes botoes';
+    gap: 8px 12px;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--borda);
+  }
+
+  .gastos-tabela tbody td {
+    padding: 0;
+    border: none;
+    white-space: normal;
+  }
+
+  .gastos-tabela .gastos-descricao {
+    grid-area: descricao;
+  }
+
+  .gastos-tabela .gastos-valor {
+    grid-area: valor;
+  }
+
+  .gastos-tabela .gastos-categoria {
+    grid-area: categoria;
+  }
+
+  .gastos-tabela .gastos-data {
+    grid-area: data;
+    text-align: right;
+  }
+
+  .gastos-tabela .gastos-celula-botoes {
+    grid-area: botoes;
+  }
+
+  .gastos-celula-botoes .botao {
+    flex: 1;
+  }
+
+  .gastos-tabela .gastos-vazio {
+    grid-column: 1 / -1;
+  }
+
+  .gastos-tabela tfoot tr {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--verde-claro);
+  }
+
+  .gastos-tabela .gastos-sem-conteudo {
+    display: none;
+  }
 }
