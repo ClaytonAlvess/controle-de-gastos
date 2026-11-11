@@ -12,3 +12,12 @@ CREATE TABLE gasto (
 );
 
 INSERT INTO categoria (cat_nome) VALUES ('Alimentação'), ('Transporte'), ('Lazer');
+
+-- Índice para a chave estrangeira (sugestão do Performance Advisor do Supabase)
+CREATE INDEX idx_gasto_cat_id ON gasto(cat_id);
+
+-- Segurança (Security Advisor do Supabase): habilita RLS sem políticas.
+-- Assim a API pública do Supabase (chaves anon/publishable) não acessa as tabelas.
+-- A API Node conecta com o usuário postgres, que ignora RLS, e continua funcionando.
+ALTER TABLE categoria ENABLE ROW LEVEL SECURITY;
+ALTER TABLE gasto ENABLE ROW LEVEL SECURITY;
