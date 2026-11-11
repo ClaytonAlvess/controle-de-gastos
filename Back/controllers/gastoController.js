@@ -48,7 +48,8 @@ const inserir = async (req, res) => {
     const dados = { gas_descricao: String(gas_descricao).trim(), gas_valor, cat_id };
     if (gas_data) dados.gas_data = gas_data;
 
-    const gasto = await Gasto.create(dados);
+    const novo = await Gasto.create(dados);
+    const gasto = await Gasto.findByPk(novo.gas_id, { include: incluirCategoria });
     res.status(201).json(gasto);
   } catch (erro) {
     res.status(500).json({ erro: erro.message });
@@ -72,6 +73,7 @@ const atualizar = async (req, res) => {
     if (gas_data) dados.gas_data = gas_data;
 
     await gasto.update(dados);
+    await gasto.reload({ include: incluirCategoria });
     res.json(gasto);
   } catch (erro) {
     res.status(500).json({ erro: erro.message });
