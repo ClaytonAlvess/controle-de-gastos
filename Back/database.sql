@@ -21,3 +21,7 @@ CREATE INDEX idx_gasto_cat_id ON gasto(cat_id);
 -- A API Node conecta com o usuário postgres, que ignora RLS, e continua funcionando.
 ALTER TABLE categoria ENABLE ROW LEVEL SECURITY;
 ALTER TABLE gasto ENABLE ROW LEVEL SECURITY;
+
+-- Política explícita: a API pública do Supabase (anon/authenticated) não lê nem altera nada.
+CREATE POLICY "Bloqueia acesso pela API publica" ON categoria FOR ALL TO anon, authenticated USING (false) WITH CHECK (false);
+CREATE POLICY "Bloqueia acesso pela API publica" ON gasto FOR ALL TO anon, authenticated USING (false) WITH CHECK (false);
