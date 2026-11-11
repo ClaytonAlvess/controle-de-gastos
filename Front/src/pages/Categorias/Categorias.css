@@ -1,0 +1,84 @@
+.categorias h2 {
+  margin-bottom: 16px;
+}
+
+.categorias-form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.categorias-form h3 {
+  margin-bottom: 4px;
+}
+
+.categorias-form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.categorias-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.categorias-acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.categorias-mensagem {
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.categorias-erro {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.categorias-sucesso {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.categorias-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categorias-tabela th,
+.categorias-tabela td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.categorias-tabela th {
+  background-color: #e8f5e9;
+}
+
+.categorias-botoes {
+  display: flex;
+  gap: 8px;
+}
+
+.categorias-vazio {
+  text-align: center !important;
+  color: #777;
+}
