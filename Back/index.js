@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./swagger');
 const sequelize = require('./config/database');
 const categoriaRoutes = require('./routes/categoriaRoutes');
 const gastoRoutes = require('./routes/gastoRoutes');
@@ -17,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.use('/categorias', categoriaRoutes);
 app.use('/gastos', gastoRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 sequelize.authenticate()
   .then(() => {
