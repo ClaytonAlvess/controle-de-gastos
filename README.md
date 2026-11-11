@@ -1,1 +1,3 @@
-# finan-as
+# Controle de Gastos
+
+Projeto em construção.
