@@ -7,6 +7,9 @@ Sistema de controle de gastos pessoais desenvolvido para a avaliação individua
 - Cadastrar, listar, editar e excluir categorias
 - Cadastrar, listar, editar e excluir gastos (descrição, valor, data e categoria)
 - Listagem de gastos ordenada por data (mais recentes primeiro) com o total
+- Painel inicial com resumo, gastos por categoria e últimos gastos
+- Busca e filtro por categoria na tela de gastos
+- Layout responsivo para celular
 - Bloqueio da exclusão de categorias que possuem gastos
 - Documentação da API com Swagger
 
@@ -38,6 +41,7 @@ controle-de-gastos/
 │   ├── swagger/                  # categoriaSwagger.js, gastoSwagger.js
 │   ├── swagger.js                # Configuração do Swagger (OpenAPI 3.0.0)
 │   ├── database.sql              # Script de criação das tabelas
+│   ├── seed.sql                  # Dados de exemplo (opcional)
 │   ├── index.js                  # Ponto de entrada da API
 │   ├── .env.example
 │   └── package.json
@@ -47,6 +51,7 @@ controle-de-gastos/
     │   ├── components/           # Header, Footer, Botao (.jsx + .css)
     │   ├── pages/                # Home, Categorias, Gastos (.jsx + .css)
     │   ├── services/api.js       # URL da API
+    │   ├── utils/formatar.js     # Formatação de valores, datas e cores
     │   ├── App.jsx
     │   ├── index.css
     │   └── main.jsx
@@ -56,7 +61,7 @@ controle-de-gastos/
 
 ## Banco de dados
 
-Tabelas `categoria` e `gasto` (cada gasto pertence a uma categoria). No Supabase, abra o **SQL Editor** e execute o conteúdo de [`Back/database.sql`](Back/database.sql).
+Tabelas `categoria` e `gasto` (cada gasto pertence a uma categoria). No Supabase, abra o **SQL Editor** e execute o conteúdo de [`Back/database.sql`](Back/database.sql). Ele cria as tabelas, o índice e habilita o RLS (só a API Node acessa os dados). Para ter dados de exemplo, execute também [`Back/seed.sql`](Back/seed.sql).
 
 ## Como rodar
 
