@@ -127,9 +127,11 @@ function Categorias() {
               <tr key={categoria.cat_id}>
                 <td>{categoria.cat_id}</td>
                 <td>{categoria.cat_nome}</td>
-                <td className="categorias-botoes">
-                  <Botao texto="Editar" tipo="secundario" onClick={() => editar(categoria)} />
-                  <Botao texto="Excluir" tipo="perigo" onClick={() => excluir(categoria)} />
+                <td>
+                  <div className="categorias-botoes">
+                    <Botao texto="Editar" tipo="secundario" onClick={() => editar(categoria)} />
+                    <Botao texto="Excluir" tipo="perigo" onClick={() => excluir(categoria)} />
+                  </div>
                 </td>
               </tr>
             ))

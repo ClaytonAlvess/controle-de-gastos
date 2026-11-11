@@ -225,9 +225,11 @@ function Gastos() {
                   <td>{gasto.gas_descricao}</td>
                   <td>{gasto.categoria ? gasto.categoria.cat_nome : '-'}</td>
                   <td>{formatarValor(gasto.gas_valor)}</td>
-                  <td className="gastos-botoes">
-                    <Botao texto="Editar" tipo="secundario" onClick={() => editar(gasto)} />
-                    <Botao texto="Excluir" tipo="perigo" onClick={() => excluir(gasto)} />
+                  <td>
+                    <div className="gastos-botoes">
+                      <Botao texto="Editar" tipo="secundario" onClick={() => editar(gasto)} />
+                      <Botao texto="Excluir" tipo="perigo" onClick={() => excluir(gasto)} />
+                    </div>
                   </td>
                 </tr>
               ))
