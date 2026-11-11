@@ -23,7 +23,8 @@ const options = {
       },
     },
   },
-  apis: [path.join(__dirname, 'swagger', '*.js')],
+  // glob exige barras normais (/), inclusive no Windows
+  apis: [path.join(__dirname, 'swagger', '*.js').replace(/\\/g, '/')],
 };
 
 module.exports = swaggerJsdoc(options);
