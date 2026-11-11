@@ -1,0 +1,110 @@
+.gastos h2 {
+  margin-bottom: 16px;
+}
+
+.gastos-form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gastos-form h3 {
+  margin-bottom: 12px;
+}
+
+.gastos-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.gastos-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gastos-campo-largo {
+  grid-column: 1 / -1;
+}
+
+.gastos-campo label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.gastos-campo input,
+.gastos-campo select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.gastos-acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.gastos-mensagem {
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.gastos-erro {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.gastos-sucesso {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.gastos-tabela-container {
+  overflow-x: auto;
+}
+
+.gastos-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gastos-tabela th,
+.gastos-tabela td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.gastos-tabela th {
+  background-color: #e8f5e9;
+}
+
+.gastos-tabela tfoot td {
+  font-weight: bold;
+  background-color: #f1f8e9;
+  border-bottom: none;
+}
+
+.gastos-botoes {
+  display: flex;
+  gap: 8px;
+}
+
+.gastos-vazio {
+  text-align: center !important;
+  color: #777;
+}
